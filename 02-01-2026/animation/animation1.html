@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: rgb(200, 255, 0);
+            margin-bottom: 5px;
+            animation-name: moving;
+            animation-duration: 5s;
+            position: relative;
+            animation-fill-mode: backwards;
+        }
+
+
+
+        @keyframes moving {
+            from {
+                top: 0px;
+                left: 0px;
+
+            }
+
+            to {
+                background-color: rgb(255, 73, 17);
+                top: 0px;
+                left: 400px;
+            }
+        }
+
+        .div2 {
+            animation-timing-function: ease;
+
+        }
+
+        .div3 {
+            animation-timing-function: ease-in;
+        }
+
+        .div4 {
+            animation-timing-function: ease-out;
+        }
+
+        .div5 {
+            animation-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="div1">linear</div>
+    <div class="div2">ease</div>
+    <div class="div3">ease-in</div>
+    <div class="div4">ease-out</div>
+    <div class="div5">ease-in-out</div>
+</body>
+
+</html>

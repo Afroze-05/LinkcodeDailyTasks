@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unique Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, #00c6ff, #0072ff);
+            font-family: 'Poppins', sans-serif;
+        }
+
+        /* CARD */
+        .calculator {
+            background: rgba(255, 255, 255, 0.25);
+            backdrop-filter: blur(15px);
+            padding: 30px;
+            border-radius: 20px;
+            width: 380px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #033;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .buttons {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px;
+            border-radius: 30px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            color: white;
+            background: linear-gradient(135deg, #00503f, #00a884);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn:active {
+            transform: scale(0.95);
+        }
+
+        /* THANKS BUTTON */
+        .thanks {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #333, #111);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="calculator">
+        <h1>Calculator</h1>
+
+        <input type="number" id="num1" placeholder="Enter first number">
+        <input type="number" id="num2" placeholder="Enter second number">
+        <input type="text" id="result" placeholder="Result" readonly>
+
+        <div class="buttons">
+            <button class="btn" id="add">ADD</button>
+            <button class="btn" id="sub">SUB</button>
+            <button class="btn" id="mul">MUL</button>
+            <button class="btn" id="div">DIV</button>
+            <button class="btn thanks" onclick="document.write('<h1>Thanks for using this calculator</h1>')">
+                THANK YOU
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function getValues() {
+            return [
+                parseFloat(num1.value),
+                parseFloat(num2.value)
+            ];
+        }
+
+        add.onclick = () => result.value = getValues()[0] + getValues()[1];
+        sub.onclick = () => result.value = getValues()[0] - getValues()[1];
+        mul.onclick = () => result.value = getValues()[0] * getValues()[1];
+        div.onclick = () => result.value = getValues()[0] / getValues()[1];
+    </script>
+
+<!-- </body> -->
+
+</html>

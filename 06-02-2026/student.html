@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Object → Array</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        input {
+            margin: 5px;
+            padding: 6px;
+        }
+        button {
+            padding: 6px 12px;
+            cursor: pointer;
+        }
+        .card {
+            background-color: rgb(255, 223, 229);
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-top: 10px;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="inputName" placeholder="Enter Name">
+    <input type="number" id="inputAge" placeholder="Enter Age">
+    <input type="text" id="inputGrade" placeholder="Enter Grade">
+    <button onclick="getSubmit()">SUBMIT</button>
+
+    <div id="container"></div>
+
+    <script>
+        let students = [];
+
+        function getSubmit() {
+            let name = document.getElementById("inputName").value;
+            let age = document.getElementById("inputAge").value;
+            let grade = document.getElementById("inputGrade").value;
+
+            let student = {
+                id: Date.now(),
+                name: name,
+                age: age,
+                grade: grade
+            };
+
+            students.push(student);
+            console.log("Student Object:", student);
+
+            console.log("Object to Array:", Object.entries(student));
+
+            display(students);
+
+         
+            document.getElementById("inputName").value = "";
+            document.getElementById("inputAge").value = "";
+            document.getElementById("inputGrade").value = "";
+        }
+
+        function display(list) {
+            let container = document.getElementById("container");
+            container.innerHTML = "";
+
+            list.forEach(val => {
+                let div = document.createElement("div");
+                div.className = "card";
+
+                div.innerHTML = `
+                    <h3>ID: ${val.id}</h3>
+                    <p>Name: ${val.name}</p>
+                    <p>Age: ${val.age}</p>
+                    <p>Grade: ${val.grade}</p>
+                `;
+
+                container.appendChild(div);
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+
+<!-- Object.entries -->

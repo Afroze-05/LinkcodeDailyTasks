@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+
+</head>
+
+<body>
+    <h1> CAR OBJECT</h1>
+    <P ID="demo"></P>
+    <P ID="demo1"></P>
+    <h1>Details</h1>
+    name:<input type="text" name="fname" id="fname"><br>
+    age:<input type="number" name="age" id="age"><br>
+    <button onclick="display()" id="btn">click me </button>
+    <br>
+    <br>
+    <h1>OUTPUT</h1>
+    <p id="demo2"></p>
+    <script>
+
+        //car object
+        const car = {
+            type: "petrol",
+            price: 200000,
+            color: "black",
+            brand: "BMW"
+        }
+        document.getElementById("demo").innerHTML = "The brand of car is :" + car.brand + " \n and price is:" + car.price + "and color is:" + car.color;
+        document.write("<br>");
+        const student = {
+            name: "Afroze",
+            age: 22,
+            college: "GPP",
+            marks: 99
+        }
+        document.getElementById("demo1").innerHTML = "The name of student is :" + student.name + "<br> and age is :" + student.age + "<br>and college is :" + student.college + "<br>and marks is :" + student.marks;
+        document.write("<br>");
+        function display() {
+            //data call
+            let fname = document.getElementById("fname").value;
+            let age = document.getElementById("age").value;
+            //object store
+            const detail = {
+                firstname: fname,
+                Age: age
+            }
+            //output
+            document.getElementById("demo2").innerText = "Hello:" + detail.firstname + "Age is :" + detail.Age;
+            document.write("Hello:" + detail.firstname + "Age is :" + detail.Age);
+
+            //value set
+            localStorage.setItem("username", fname);
+            localStorage.setItem("age", age);
+            //ref next page 
+            window.location.href = "obj1.html";
+        }
+        //quiz perogress, after refreash it will show previous progress
+        //log out timing
+        
+    </script>
+</body>
+
+</html>

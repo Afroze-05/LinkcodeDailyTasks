@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Product Search & Filter</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>s
+:root {
+    --primary: #7af1ce;
+    --secondary: #ffab93;
+    --card: #ffffffde;
+    --text: #1f2937;
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1 {
+    color: rgb(17, 16, 16);
+    margin-bottom: 20px;
+}
+
+/* FILTER BAR */
+.filters {
+    background: rgba(255,255,255,0.95);
+    padding: 18px;
+    border-radius: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+    margin-bottom: 35px;
+}
+
+input, select, button {
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+button {
+    background: #6366f1;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4338ca;
+}
+
+/* PRODUCTS GRID */
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 240px));
+    justify-content: center;
+    gap: 20px;
+}
+
+/* PRODUCT CARD */
+.product {
+    background: var(--card);
+    padding: 14px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    transition: 0.3s;
+}
+
+.product:hover {
+    transform: translateY(-6px);
+}
+
+/* IMAGE FIX */
+.product img {
+    width: 100%;
+    height: 150px;       /* 👈 MEDIUM SIZE */
+    object-fit: contain; /* 👈 NO STRETCH */
+    border-radius: 10px;
+    background: #f1f5f9;
+}
+
+.product h3 {
+    margin: 10px 0 5px;
+    color: var(--text);
+}
+
+.product h4 {
+    color: #16a34a;
+    margin: 5px 0;
+}
+
+.product p {
+    font-size: 13px;
+    color: #555;
+}
+
+.category {
+    font-size: 12px;
+    color: #6366f1;
+    font-weight: bold;
+}
+</style>
+</head>
+
+<body>
+
+<h1>🛍 Electronic Store</h1>
+
+<div class="filters">
+    <input type="text" id="searchBar" placeholder="Search anything...">
+
+    <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Audio">Audio</option>
+        <option value="Storage">Storage</option>
+        <option value="Office">Office</option>
+    </select>
+
+    <input type="number" id="minPrice" placeholder="Min ₹">
+    <input type="number" id="maxPrice" placeholder="Max ₹">
+
+    <button onclick="applyFilters()">Search</button>
+</div>
+
+<div id="productContainer" class="products-container"></div>
+
+<script>
+const products = [
+    { pname:"Mobile", price:20000, desc:"OnePlus Android phone", img:"./mobile.jpg", category:"Electronics" },
+    { pname:"Smart Watch", price:3500, desc:"Fitness smart watch", img:"./watch.jpg", category:"Accessories" },
+    { pname:"TV", price:45000, desc:"42 inch Smart LED TV", img:"./tv.jpg", category:"Electronics" },
+    { pname:"Power Bank", price:1500, desc:"10000mAh fast charging", img:"./powerbank.jpg", category:"Accessories" },
+    { pname:"Headphones", price:2500, desc:"Noise cancelling headphones", img:"./headphone.jpg", category:"Audio" },
+    { pname:"Camera", price:38000, desc:"DSLR camera", img:"./camera.jpg", category:"Electronics" },
+    { pname:"Laptop", price:65000, desc:"Laptop for coding & gaming", img:"./laptop.jpg", category:"Electronics" },
+    { pname:"Pendrive", price:700, desc:"64GB USB storage", img:"./pendrive.jpg", category:"Storage" },
+    { pname:"Printer", price:12000, desc:"Wireless printer", img:"./printer.jpg", category:"Office" },
+    { pname:"Earpods", price:1800, desc:"Bluetooth earpods", img:"./earpodes.jpg", category:"Audio" }
+];
+
+const container = document.getElementById("productContainer");
+
+function display(list) {
+    container.innerHTML = "";
+
+    if (list.length === 0) {
+        container.innerHTML = "<h3 style='color:white'>No products found</h3>";
+        return;
+    }
+
+    list.forEach(p => {
+        container.innerHTML += `
+        <div class="product">
+            <img src="${p.img}">
+            <h3>${p.pname}</h3>
+            <h4>₹${p.price}</h4>
+            <p>${p.desc}</p>
+            <div class="category">${p.category}</div>
+        </div>`;
+    });
+}
+
+function applyFilters() {
+    const search = searchBar.value.toLowerCase().trim();
+    const category = categoryFilter.value;
+    const min = minPrice.value ? Number(minPrice.value) : null;
+    const max = maxPrice.value ? Number(maxPrice.value) : null;
+
+    const filtered = products.filter(p => {
+        const searchMatch =
+            search === "" ||
+            p.pname.toLowerCase().includes(search) ||
+            p.desc.toLowerCase().includes(search) ||
+            p.price.toString().includes(search);
+
+        const categoryMatch =
+            category === "all" || p.category === category;
+
+        const minMatch = min === null || p.price >= min;
+        const maxMatch = max === null || p.price <= max;
+
+        return searchMatch && categoryMatch && minMatch && maxMatch;
+    });
+
+    display(filtered);
+}
+
+display(products);
+</script>
+
+</body>
+</html>

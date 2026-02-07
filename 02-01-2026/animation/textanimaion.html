@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="slide-left">Hotstar Special</h1>
+    <h1 class="fade">Welcome to Hotstar</h1>
+    <h1 class="slide-up">Mrs. Deshpande</h1>
+    <h1 class="typing">Watch Unlimited Movies</h1>
+    <h1 class="zoom">Now Streaming</h1>
+    <h1 class="glow">HOTSTAR SPECIAL</h1>
+
+<div class="marquee">
+  <span>🔥 Hotstar Special • New Movies • Live Sports • Premium Shows 🔥</span>
+</div>
+<div class="year">
+  <span>202</span>
+  <div class="digit-box">
+    <span class="digit old">5</span>
+    <span class="digit new">6</span>
+  </div>
+</div>
+
+
+
+
+<style>
+.slide-left {
+    transform: translateX(-100px);
+    opacity: 0;
+    animation: slideLeft 1.5s forwards;
+    color:blue;
+}
+@keyframes slideLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+.fade {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    color:chartreuse;
+}
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+.slide-up {
+    transform: translateY(50px);
+    opacity: 0;
+    animation: slideUp 1.2s ease-out forwards;
+    color:#ff0000
+}
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.typing {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    animation: typing 3s steps(30) forwards, blink 0.6s infinite;
+}
+
+@keyframes typing {
+    to { width: 100%; }
+}
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+.zoom {
+    transform: scale(0.5);
+    opacity: 0;
+    animation: zoomIn 1s ease forwards;
+}
+@keyframes zoomIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+.glow {
+    color: #fff;
+    animation: glow 1.5s infinite alternate;
+}
+@keyframes glow {
+    from { text-shadow: 0 0 5px #00bfff; }
+    to { text-shadow: 0 0 20px #00bfff; }
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background: #000;
+    color: #fff;
+    padding: 10px 0;
+}
+.marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 12s linear infinite;
+}
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+}
+body {
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding: 50px;
+}
+
+/* YEAR */
+.year {
+    display: flex;
+    font-size: 60px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* DIGIT CONTAINER */
+.digit-box {
+    position: relative;
+    width: 40px;
+    height: 70px;
+    overflow: hidden;
+}
+
+/* DIGITS */
+.digit {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    transition: transform 0.5s ease;
+}
+
+.old {
+    transform: translateY(0);
+}
+
+.new {
+    transform: translateY(100%);
+}
+
+/* HOVER EFFECT */
+.year:hover .old {
+    transform: translateY(-100%);
+}
+
+.year:hover .new {
+    transform: translateY(0);
+}
+</style>
+</body>
+</html>

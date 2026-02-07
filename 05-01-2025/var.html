@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let a; //dec
+        a = 70; //initialize
+        document.write(a); // printing for browser
+        document.write("<br>");
+        let A;  //case sensitive
+        A = 78;
+        document.write(A);
+        A = 90;
+        document.write("<br>");
+        document.write(A);
+        //once a variable is declared with let it can't be declare again but can be reinitialize;
+        //var can't start with number
+        //var can't be reserved keywords
+        //var is case sensitive
+        //var cant be white space
+        //can start or end with $ and underscore _
+        //1. snake case--  pune_city_india
+        //2. camel case--  puneCityIndia
+        let puneCity = 'pune';
+        document.write(puneCity);
+        const x = 70; // constant value, once declare can't be reinitialize
+        document.write("<br>");
+        document.write(x);
+        //const can't be redeclare and reinitialize
+        let num = 89.78;
+        document.write("<br>");
+        document.write(num);
+        document.write(typeof (num)); // decimal values is also "Number" type in js
+        let str = 'h';
+        document.write("<br>");
+        document.write(str);
+        document.write(typeof (str));  // a singal caharacter is also "string " type in js
+
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        let age = 18;
+        let name = "afroze";
+        let avg = 99.76;
+        //spacing break line using <br>
+        document.write("name is :" + "<br>" + name + "<br>" + "age is :" + age + "<br>" + "average is :" + avg);
+        document.write("<br>");
+        document.write("_________________");
+        document.write("<br>");
+
+        let age1 = 99, name1 = "hshh", avg1 = 99.76; //declare & initialize in one line
+        //can print using quoted space "  "
+        document.write("name is :" + "   " + name1 + "   " + "age is :" + age1 + "   " + "average is :" + avg1);
+        document.write("<br>");
+        document.write("_________________");
+        document.write("<br>");
+
+        document.write(`${age}  ${name}  ${avg}`);   //modern way to print
+        document.write("<br>");
+        document.write("_________________");
+        document.write("<br>");
+        //arithimatic operator :  + - * / % **  ++a  a++ --a a--
+        // logical operator : &&(AND) ||(OR) !(NOT)
+        //comparision operator: < > == == <= >=
+        //assignment operator: = += -= *= /= %=
+        //conditional statement: if else if else ifelse ladder, switch case
+
+        let a1 = 20;
+        let b1 = 5;
+        document.write(a1 + b1); //25
+        document.write("<br>");
+        document.write(a1 - b1); //15
+        document.write("<br>");
+        document.write(a1 * b1); //100
+        document.write("<br>");
+        document.write(a1 / b1); //4
+        document.write("<br>");
+        document.write(a1 % b1); //0
+        document.write("<br>");
+        document.write(a1 ** b1); //20^5 = 3200000
+        document.write("<br>");
+
+        //using prompt to take input from user
+        let age2 = Number(prompt("enter age")); //convert string to number
+
+        document.write(age2);
+        if (age2 > 17) {
+            document.write("you can vote");
+        }
+        else {
+            document.write("you can't vote");
+        }
+        document.write("<br>");
+        document.write(typeof (age2)); //number
+
+    </script>
+
+</body>
+
+</html>

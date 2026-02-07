@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>student list</h1>
+    <ul id="list"></ul>
+
+    <script>
+
+document.write("<br>");
+let students=["abc","xyz","pqr","mno"]
+let ul=document.getElementById("list");
+for(let i=0; i<students.length;i++){
+
+    ul.innerHTML +="<li>"+students[i]+"</li>";
+}
+
+document.write("<br>");
+        let a=[5,6,7];
+        document.write(a);
+        document.write("<br>");
+        document.write(a[2]);
+        document.write("<br>");
+        document.write(a.length);
+        document.write("<br>");
+        for(let i=0;i<a.length;i++){
+            document.write(a[i]);
+        }
+        document.write("<br>");
+        a.push(8); //inserting element at the end
+        document.write(a);
+        document.write("<br>");
+
+        a.unshift(4); //inserting element at the start
+        document.write(a);
+
+        document.write("<br>");
+        a.shift(); //removing element from the start
+        document.write(a+"<br>");
+        document.write(a[0]);
+
+         document.write("<br>");
+        a.pop(); //removing element from the end
+        document.write(a+"<br>");
+        document.write(a[4]);
+
+        document.write("<br>");
+         document.write(a.length);
+
+         document.write("<br>");
+        
+let arr=[1,2,3,4,5,6,7];
+let sum=0;
+for(let i=0;i<arr.length;i++){
+    document.write(arr[i]);
+    sum+=arr[i];
+}
+document.write("<br>");
+document.write(sum);
+
+
+
+
+    </script>
+</body>
+</html>

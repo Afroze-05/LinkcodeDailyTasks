@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz with LocalStorage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Which is the only continent in the world without a desert?</h1>
+        <input type="radio" name="q1" value="North America"> North America<br>
+        <input type="radio" name="q1" value="Asia"> Asia<br>
+        <input type="radio" name="q1" value="Africa"> Africa<br>
+        <input type="radio" name="q1" value="Europe"> Europe<br>
+    </div>
+
+    <div class="container">
+        <h1>What is the answer of 1 - 9?</h1>
+        <input type="radio" name="q2" value="8"> 8<br>
+        <input type="radio" name="q2" value="9"> 9<br>
+        <input type="radio" name="q2" value="10"> 10<br>
+        <input type="radio" name="q2" value="-8"> -8<br>
+    </div>
+
+    <div class="container">
+        <h1>Which pet is most lovable to humans?</h1>
+        <input type="radio" name="q3" value="cat"> Cat<br>
+        <input type="radio" name="q3" value="dog"> Dog<br>
+        <input type="radio" name="q3" value="rabbit"> Rabbit<br>
+        <input type="radio" name="q3" value="mouse"> Mouse<br>
+    </div>
+
+    <button onclick="submitQuiz()">Submit</button>
+    <br><br>
+    <input type="text" id="result" placeholder="Score" readonly>
+
+    <script>
+        // SAVE ANSWERS WHEN USER SELECTS
+        document.querySelectorAll("input[type=radio]").forEach(radio => {
+            radio.addEventListener("change", () => {
+                localStorage.setItem(radio.name, radio.value);
+            });
+        });
+
+        // RESTORE ANSWERS ON PAGE LOAD
+        window.onload = () => {
+            document.querySelectorAll("input[type=radio]").forEach(radio => {
+                if (localStorage.getItem(radio.name) === radio.value) {
+                    radio.checked = true;
+                }
+            });
+        };
+
+        // SUBMIT QUIZ
+        function submitQuiz() {
+            let score = 0;
+
+            if (localStorage.getItem("q1") === "Asia") score++;
+            if (localStorage.getItem("q2") === "-8") score++;
+            if (localStorage.getItem("q3") === "dog") score++;
+
+            document.getElementById("result").value = `Score: ${score}/3`;
+
+            // CLEAR RADIO BUTTONS
+            document.querySelectorAll("input[type=radio]").forEach(radio => {
+                radio.checked = false;
+            });
+
+            // CLEAR LOCAL STORAGE
+            localStorage.clear();
+        }
+    </script>
+
+</body>
+
+</html>

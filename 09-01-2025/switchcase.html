@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Geometry Calculator</title>
+</head>
+
+<body>
+
+    <h2>Geometry Calculator</h2>
+
+    <script>
+        let choice = prompt(
+            "Choose Shape:\n" +
+            "1. Square\n" +
+            "2. Rectangle\n" +
+            "3. Triangle"
+        );
+
+        switch (choice) {
+
+            case "1":
+                let side = parseFloat(prompt("Enter side of square:"));
+                let squareArea = side * side;
+                let squarePerimeter = 4 * side;
+
+                document.write("Square Area = " + squareArea + "<br>");
+                document.write("Square Perimeter = " + squarePerimeter);
+                break;
+
+            case "2":
+                let length = parseFloat(prompt("Enter length:"));
+                let width = parseFloat(prompt("Enter width:"));
+                let rectArea = length * width;
+                let rectPerimeter = 2 * (length + width);
+
+                document.write("Rectangle Area = " + rectArea + "<br>");
+                document.write("Rectangle Perimeter = " + rectPerimeter);
+                break;
+
+            case "3":
+                let base = parseFloat(prompt("Enter base:"));
+                let height = parseFloat(prompt("Enter height:"));
+                let a = parseFloat(prompt("Enter side a:"));
+                let b = parseFloat(prompt("Enter side b:"));
+                let c = parseFloat(prompt("Enter side c:"));
+
+                let triArea = 0.5 * base * height;
+                let triPerimeter = a + b + c;
+
+                document.write("Triangle Area = " + triArea + "<br>");
+                document.write("Triangle Perimeter = " + triPerimeter);
+                break;
+
+            default:
+                document.write("Invalid choice!");
+        }
+    </script>
+
+</body>
+
+</html>
