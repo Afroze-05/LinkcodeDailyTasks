@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            gap: 10px;
+            background-color: rgb(70, 69, 67);
+            height: 400px;
+            width: 600px;
+            padding: 10px;
+        }
+
+        .container div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+        }
+
+        .item1,
+        .item6 {
+            background-color: rgb(129, 53, 252);
+            grid-column-end: span 3;
+        }
+
+        .item2 {
+            background-color: rgb(4, 170, 170);
+            grid-row-end: span 2;
+        }
+
+        .item3 {
+            background-image: linear-gradient(to right, rgb(4, 2, 133), rgb(140, 86, 211));
+            grid-column-end: span 2;
+
+        }
+
+        .item4,
+        .item5 {
+            background-image: linear-gradient(to right, rgb(4, 2, 133), rgb(140, 86, 211));
+            grid-column-end: span 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">Header</div>
+        <div class="item2">vertical</div>
+        <div class="item3">horizontal</div>
+        <div class="item4">box</div>
+        <div class="item5">box</div>
+        <div class="item6">footer</div>
+
+    </div>
+</body>
+
+</html>

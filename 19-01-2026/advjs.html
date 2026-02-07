@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Advanced JavaScript - this Keyword</title>
+</head>
+<body>
+
+<h2>Advanced JavaScript Examples</h2>
+
+<button onclick="globalThisExample()">Global this</button>
+<button onclick="localThisExample()">Local this</button>
+<button onclick="strictModeExample()">Strict Mode this</button>
+<button onclick="objectExample()">Object this</button>
+<button onclick="arrowExample()">Arrow Function this</button>
+
+<h3 id="output"></h3>
+
+<script>
+    // 1. Global this
+    function globalThisExample() {
+        document.getElementById("output").innerHTML =
+            "Global this refers to: " + this;
+    }
+
+    // 2. Local this (normal function)
+    function localThisExample() {
+        function show() {
+            return this;
+        }
+        document.getElementById("output").innerHTML =
+            "Local this (normal function): " + show();
+    }
+
+    // 3. Strict mode
+    function strictModeExample() {
+        "use strict";
+        function show() {
+            return this;
+        }
+        document.getElementById("output").innerHTML =
+            "Strict mode this: " + show();
+    }
+
+    // 4. Object with normal function
+    function objectExample() {
+        let user = {
+            name: "Rahul",
+            show: function () {
+                return this.name;
+            }
+        };
+        document.getElementById("output").innerHTML =
+            "Object this (normal function): " + user.show();
+    }
+
+    // 5. Arrow function
+    function arrowExample() {
+        let user = {
+            name: "Rahul",
+            show: () => {
+                return this.name;
+            }
+        };
+        document.getElementById("output").innerHTML =
+            "Arrow function this: " + user.show();
+    }
+</script>
+
+</body>
+</html>

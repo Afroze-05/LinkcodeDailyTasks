@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="demo"></pre>
+    <script>
+        let result="";
+
+        //*
+        //**
+        //***
+        //****
+        for(let i=1;i<=4;i++){
+            for(let j=1;j<=i;j++){
+                result+="*";
+            }
+            result+="\n";
+        }
+ result+="\n\n";
+
+       //****
+       //***
+       //**
+       //*  
+        for(let i=4;i>=1;i--){
+            for(let j=1;j<=i;j++){
+                result+="*";
+            }
+            result+="\n";
+        }
+
+        //0101
+        //010
+        //01
+        //0
+
+        for(let i=4;i>=1;i--){
+            for(let j=1;j<=i;j++){
+                if(j%2==0){
+                    result+="1";
+                }
+                else{
+                    result+="0";
+                }
+            }
+            result+="\n";
+        }
+        //a1b2
+        //a1b
+        //a1
+        //a
+
+  //a1b2
+        //a1b
+        //a1
+        //a
+
+let char = 97; 
+
+for (let i = 4; i >= 1; i--) {
+  let num = 1; 
+
+  for (let j = 1; j <= i; j++) {
+    if (j % 2 == 0) {
+      result += num;
+      num++;
+    } else {
+      result += String.fromCharCode(char);
+      char++; // increment char globally
+    }
+  }
+
+  result += "\n";
+}
+  //abcde
+  //ihgf
+  //jkl
+  //nm
+
+let c = 97; 
+
+for (let i = 5; i>=1; i--) {
+  if (i%2 != 0) {   
+    for (let j = 1; j<=i; j++) 
+    {
+        result += String.fromCharCode(c++);
+    }
+  } 
+  else {               
+    for (let j=0; j<i; j++)
+    {
+        result += String.fromCharCode(c + i - 1 - j);
+    }
+    c += i;
+  }
+
+  result += "\n";
+}
+
+//7777777
+//55555
+//333
+//1
+let result="";
+for(let i=7;i>=1;i-=2){
+    for(let j=1;j<=i;j++){
+        result+=i;
+    }
+    result+="\n";
+}
+
+        document.getElementById("demo").textContent=result;
+    </script>
+    
+</body>
+</html>

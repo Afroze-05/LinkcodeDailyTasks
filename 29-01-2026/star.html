@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<pre id="demo"></pre>
+
+<script>
+let rows = 5;
+let result = "";
+
+// 1️⃣ Left-aligned increasing triangle
+for (let i = 1; i <= rows; i++) {
+    for (let j = 1; j <= i; j++) {
+        result += "*";
+    }
+    result += "\n";
+}
+
+// 2️⃣ Left-aligned decreasing triangle
+for (let i = rows; i >= 1; i--) {
+    for (let j = 1; j <= i; j++) {
+        result += "*";
+    }
+    result += "\n";
+}
+
+// 3️⃣ Right-aligned increasing triangle (JUST spaces added ✅)
+for (let i = 1; i <= rows; i++) {
+    for (let space = 1; space <= rows - i; space++) {
+        result += " ";
+    }
+    for (let star = 1; star <= i; star++) {
+        result += "*";
+    }
+    result += "\n";
+}
+
+// 4️⃣ Right-aligned decreasing triangle (JUST spaces added ✅)
+for (let i = rows; i >= 1; i--) {
+    for (let space = 1; space <= rows - i; space++) {
+        result += " ";
+    }
+    for (let star = 1; star <= i; star++) {
+        result += "*";
+    }
+    result += "\n";
+}
+
+result += "\n\n";
+// 5️⃣ Simple pyramid (spaces + stars)
+for (let i = 1; i <= rows; i++) {
+    for (let space = 1; space <= rows - i; space++) {
+        result += " ";
+    }
+    for (let star = 1; star <= 2 * i - 1; star++) {
+        result += "*";
+    }
+    result += "\n";
+}
+  //number
+result += "\n\n";
+for (let i = 1; i <= rows; i++) {
+    for (let j = 1; j <= i; j++) {
+        result += j + " ";
+    }
+    result += "\n";
+}
+
+//sqyare
+result += "\n\n";
+for(let i=1;i<=rows;i++)
+{
+    for(let j=1;j<=rows;j++){
+        result+="* ";
+    }
+     result += "\n";
+}
+document.getElementById("demo").textContent = result;
+
+
+result += "\n\n";
+for(let i=1;i<=rows;i++)
+{
+    for(let j=1;j<=rows;j++){
+        result+=i+" ";
+    }
+     result += "\n";
+}
+document.getElementById("demo").textContent = result;
+
+
+result += "\n\n";
+for(let i=1;i<=rows;i++)
+{
+    for(let j=1;j<=rows;j++)
+    {
+        result+=j+" ";
+    }
+     result += "\n";
+}
+document.getElementById("demo").textContent = result;
+
+
+result += "\n\n";
+for(let i=1;i<=rows;i++)
+{
+    for(let j=1;j<=rows;j++)
+    {
+        if(i%2==0){
+            result+="0 ";
+        }
+        else{
+            result+="1 ";
+        }
+    }
+     result += "\n";
+}
+
+result += "\n\n";
+for(let i=1;i<=rows;i++)
+{
+    for(let j=1;j<=rows;j++)
+    {
+        if(j%2==0){
+            result+="0 ";
+        }
+        else{
+            result+="1 ";
+        }
+    }
+     result += "\n";
+}
+
+result += "\n\n";
+for(let i=1;i<=rows;i++)
+{
+    for(let j=1;j<=rows;j++)
+    {
+        if((i+j)%2==0){
+            result+="0 ";
+        }
+        else{
+            result+="1 ";
+        }
+    }
+     result += "\n";
+}
+
+
+//sqyare
+result += "\n\n";
+let num=1;
+for (let i = 1; i <= rows; i++) {
+    for (let j = 1; j <= i; j++) {
+        result +=num+ " ";
+        num++;
+    }
+    result += "\n";
+}
+
+
+result += "\n\n";
+let num1=1;
+for (let i = 1; i <= rows; i++) {
+    for (let j = 1; j <= rows; j++) {
+        result +=num1+ " ";
+        num1++;
+    }
+    result += "\n";
+}
+
+
+result += "\n\n";
+let num3=97;
+for(let i=1;i<=rows;i++)
+{
+    let ch=String.fromCharCode(num3);
+    for(let j=1;j<=rows;j++){
+        result+=ch+" ";
+    }
+     result += "\n";
+     num3++;
+}
+
+
+
+// abcd
+// efgh
+// ijkl
+
+
+
+
+result += "\n\n";
+let start = "a"; 
+
+for (let i = 0; i <rows; i++) {
+    
+
+    for (let j = 0; j < rows; j++) {
+        result+=start+" ";
+        start= String.fromCharCode(start.charCodeAt(0)+1);
+    }
+
+    start += "\n";
+}
+
+
+
+
+// ace
+// gik
+// moq
+
+result += "\n\n";
+let n=97;
+for(let i=1;i<=rows;i++)
+{ let res=" ";
+    for(let j=0;j<=rows;j++){
+        let ch=String.fromCharCode(n);
+        res+=ch+" ";
+        n+=2;
+    }
+    document.getElementById("demo").textContent = res;
+    
+}
+
+// result += "\n\n";
+// let n1=97;
+// for(let i=0;i<=rows;i++)
+// { let res=" ";
+//     for(let j=0;j<=rows;j++){
+//         let ch=String.fromCharCode(n);
+//         res+=ch+" ";
+//         n+=2;
+//     }
+    
+// }
+document.getElementById("demo").textContent = result;
+</script>
+
+</body>
+</html>

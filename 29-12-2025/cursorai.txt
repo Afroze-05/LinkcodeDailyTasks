@@ -1,0 +1,35 @@
+29-12-2025
+cursor 
+
+ai powered autocomplete 
+
+5 steps formulas to generate prompt->
+1.context
+2.requirement
+3.constraint
+4.task
+5.output expectations
+
+    Under the todo folder you have to build the project                                                      you are a senior fronetd developer                                                                         Context:                                                                                                                          I am building a simple frontend-only-To-Do list application using HTML,CSS,Javascript                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          Requirements:                                                                                                                 -user can create a task                                                                                            -user can delete a task                                                                                     -user can mark a task as completed                                                                     -task should persist after page refreash using localstorage                               -i want clean and minimal UI                                                                                     -code should be readable and maintable                                                                   Constraints:                                                                                                                             - use only plain HTML,CSS nad Javascript                                                             -No frameworks or libraries                                                                                                  - use clear separation of structure  HTML for structure, css for styling purpose, Js for logic                                                                                             - Avoid Overengineering                                                                                    -follow bset frontend practices                                                                                        Task:                                                                                                                      -Create full web application structure and implementation                                                            Output exceptation:                                                                                                  -file structure(HTML,CSS and js file)                                                                             -complete working code for each file                                                                       -short explanation of how tasks are stored, update and rendered                                                                                            -brief explaination of overall approach                                                                   Note:- keep the implementation simple and easy to understand               Add brief comments only where necessary . 
+----------------------------------------------------------------
+review the generated code and make sure its production ready and following best practice
+how to run project tell me
+------------------
+Refinement                                                                                                                          -add edit functionality                                                                                                  -add proper toast when user performs crud og todos                                                                                    -add a filter so that i can differentaite between completed and remainjing tasks                                                                                                                                                                                           - also add date picker with time so that dtae wise taske will be stored and retrive as well                                                                                                                
+-make ui eye-catching
+-when task added successfully it should speak that task added successfully using "web speech API" after evert operation website should speak 
+-onn loading and reloading it should greet us "Good morning sir" like that 
+
+lit code codeshiff
+
+
+senematic html
+html responsive- <meta name..>
+css responsive 
+documentation
+defensive programming
+maintabilty
+in build api
+web script 
+
+                                                                                                                                                    

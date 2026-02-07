@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: rgb(189, 251, 255);
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background-color: rgb(30, 43, 51);
+            padding: 10px 0;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            /* center buttons */
+            gap: 4px;
+            background-color: rgb(88, 114, 131);
+            padding: 8px 0;
+        }
+
+        .nav button {
+            padding: 6px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Pune section */
+        .puneheader {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Image */
+        .puneheader img {
+            width: 360px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            /* center image */
+        }
+
+        /* Title */
+        .puneheader p {
+            margin: 12px 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Paragraph */
+        .puneheader h4 {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.6;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .site-footer {
+            background-color: rgb(23, 41, 46);
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 40px 20px;
+            /* 👈 increases height */
+            gap: 25px;
+        }
+
+        /* Text links */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        /* Social section */
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+            flex-wrap: wrap;
+        }
+
+        /* Social item */
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .social-item i {
+            font-size: 22px;
+            color: white;
+        }
+
+        /* Hover effect */
+        .social-item:hover,
+        .social-item:hover i {
+            color: #ff9800;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div class="header">
+        <div class="nav">
+            <button><a href="index.html">HOME</a></button>
+            <button>ABOUT</button>
+            <button>CONTACT</button>
+            <button>LOGIN</button>
+            <button>REGISTER</button>
+        </div>
+    </div>
+    <br>
+    <h1 style="text-align: center;" , color="black">Lal Mahal</h1>
+    <div class="puneheader">
+        <img src="lalmahal.jpg" alt="lalmahal">
+        <img src="lalmahal1.jpg" alt="lalmahal1">
+        <img src="lalmahal2.jpg" alt="lalmahal2">
+        <br>
+        <h4>Lal Mahal is one of the most historically important monuments in Pune, Maharashtra. Originally built in 1630
+            AD by Shahaji Maharaj, the father of Chhatrapati Shivaji Maharaj, Lal Mahal holds great significance as the
+            childhood residence of Shivaji Maharaj. It was here that Shivaji Maharaj spent his early years and learned
+            the values of leadership, courage, and administration that later shaped the Maratha Empire.
+
+            The fort is especially famous for the historic event where Shivaji Maharaj defeated Shaista Khan, the Mughal
+            general, in a daring nighttime attack. This incident made Lal Mahal a symbol of bravery, intelligence, and
+            strategic warfare. Although the original structure was destroyed over time, the present Lal Mahal is a
+            reconstructed monument that showcases paintings, statues, and exhibits depicting important moments from
+            Shivaji Maharaj’s life.
+            Located in the heart of Pune near Shaniwar Wada, Lal Mahal stands as a proud reminder of Maratha heritage
+            and valor. Today, it attracts history lovers, tourists, and students who wish to learn about Maharashtra’s
+            glorious past. The monument not only reflects architectural simplicity but also preserves the legacy of
+            courage, patriotism, and leadership associated with Chhatrapati Shivaji Maharaj.
+
+        </h4>
+    </div>
+    <div>
+        <iframe src="https://www.google.com/maps?q=Lal%20Mahal%20Fort%20Pune&output=embed" width="100%" height="400"
+            style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+
+    </div>
+    <div class="site-footer">
+
+        <div class="footer">
+            <p><i class="fa-regular fa-copyright"></i> Copyright © 2025 Pune</p>
+            <p>Designed by Pune</p>
+            <p>Terms of Use</p>
+            <p>Cookie Policy</p>
+            <p><i class="fa-solid fa-phone"></i> +91 92718278292</p>
+            <p><i class="fa-solid fa-envelope"></i> pune@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Pune</p>
+        </div>
+
+        <div class="footer-social">
+            <div class="social-item">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-twitter"></i> Twitter
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

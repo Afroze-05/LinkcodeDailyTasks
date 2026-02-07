@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Synchronous vs Asynchronous JS</title>
+</head>
+<body>
+
+<h2>Synchronous and Asynchronous JavaScript</h2>
+
+<button onclick="syncExample()">Synchronous JS</button>
+<button onclick="asyncExample()">Asynchronous JS</button>
+
+<h3 id="output"></h3>
+
+<script>
+    // Synchronous JavaScript
+    function syncExample() {
+        let text = "";
+
+        text += "Start<br>";
+        text += "Task 1 completed<br>";
+        text += "Task 2 completed<br>";
+        text += "End";
+
+        document.getElementById("output").innerHTML = text;
+    }
+
+    // Asynchronous JavaScript
+    function asyncExample() {
+        let text = "";
+
+        text += "Start<br>";
+
+        setTimeout(function () {
+            text += "Async Task completed<br>";
+            text += "End";
+            document.getElementById("output").innerHTML = text;
+        }, 2000);
+
+        text += "Waiting for async task...<br>";
+        document.getElementById("output").innerHTML = text;
+    }
+</script>
+
+</body>
+</html>

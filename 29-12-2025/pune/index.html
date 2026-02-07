@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: rgb(212, 230, 245);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .header {
+            background-color: rgb(0, 36, 65);
+            padding: 10px;
+        }
+
+        .nav {
+            display: flex;
+            justify-content: center;
+            /* 👈 center buttons */
+            gap: 2px;
+            background-color: rgb(145, 193, 201);
+            padding: 8px 0;
+        }
+
+        .nav button {
+            padding: 6px 12px;
+            font-size: 14px;
+        }
+
+
+        .heading h1 {
+            color: white;
+            text-align: center;
+            font-size: 80px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .text-border {
+            color: white;
+            /* text fill color */
+            font-size: 80px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+                'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+            -webkit-text-stroke: 2px black;
+            /* border thickness + color */
+            -moz-text-stroke: 2px black;
+            /* for Firefox */
+            text-stroke: 2px black;
+            /* fallback */
+        }
+
+
+        .punefront {
+            border: 2px solid rgb(206, 196, 196);
+            width: 260px;
+            height: 250px;
+            align-items: center;
+        }
+
+        .midheader {
+
+            height: 400px;
+
+
+            display: flex;
+            justify-content: center;
+            /* horizontal center */
+            align-items: center;
+            /* vertical center */
+
+            text-align: center;
+            padding: 20px;
+        }
+
+        .midheader a {
+            color: black;
+            text-decoration: none;
+            font-size: 18px;
+            max-width: 800px;
+            display: block;
+            text-align: left;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .place {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            background-color: rgb(243, 243, 243);
+            width: 250px;
+
+            border-radius: 15px;
+            box-shadow: 2px 2px 5px black;
+            padding: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .place:hover {
+            transform: scale(1.1);
+        }
+
+        .place img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid black;
+            box-shadow: 2px 2px 5px black;
+            border-radius: 15px;
+        }
+
+        .place p {
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .site-footer {
+            background-color: rgb(0, 36, 65);
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 40px 20px;
+            gap: 25px;
+        }
+
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+            flex-wrap: wrap;
+        }
+
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .social-item i {
+            font-size: 22px;
+            color: white;
+        }
+
+
+        .social-item:hover,
+        .social-item:hover i {
+            color: #ff9800;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            /* remove list bullets */
+            padding: 0px;
+        }
+
+        .pagination li a {
+            display: block;
+            /* let links fill the list item */
+            padding: 8px 12px;
+            text-decoration: none;
+            border: 1px solid gray;
+            color: black;
+            margin: 0 4px;
+            border-radius: 5px;
+            /* add rounded borders */
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="header">
+        <div class="nav">
+            <button>HOME</button>
+            <button>ABOUT</button>
+            <button>CONTACT</button>
+            <button>LOGIN</button>
+            <button>REGISTER</button>
+        </div>
+    </div>
+    <div class="midheader">
+        <div class="heading">
+            <marquee scrollamount="11" direction="left" loop="10" width="70%">
+                <h1 class="text-border">Welcome to Pune<sup>पुणे</sup></h1>
+
+            </marquee>
+            <br>
+            <p><a href="https://en.wikipedia.org/wiki/Pune" style="color:black; text-decoration: none;"><i><b>Pune is
+                            the
+                            capital
+                            of
+                            Maharashtra state in India. It is located
+                            in the western part of the country, in the
+                            Deccan Plateau.
+                            Pune is known for its rich history, cultural heritage, and modern amenities. The city is
+                            home to
+                            many
+                            educational institutions, including the University of Pune, and is a popular destination for
+                            tourists
+                            and
+                            students. </b></i></a></p>
+        </div>
+    </div>
+    <br>
+    <div class="gallery">
+
+        <div class="place">
+            <img src="punefront.png" alt="Pune Front" title="Pune">
+            <p>Pune Front</p>
+        </div>
+
+        <div class="place">
+            <a href="agakhan.html" style="color: black; text-decoration: none;">
+                <img src="agakhan.jpg" alt="Agakhan" title="Agakhan Palace"></a>
+            <p>Agakhan</p>
+        </div>
+
+        <div class="place">
+            <a href="shaniwar.html" style="color: black; text-decoration: none;">
+                <img src="shaniwar.jpg" alt="Shaniwar" title="Shaniwar wada">
+            </a>
+            <p>Shaniwar</p>
+        </div>
+
+        <div class="place">
+            <a href="dagdusheth.html" style="color: black; text-decoration: none;">
+                <img src="dagdusheth.jpg" alt="Dagdusheth" title="Dagdusheth Temple">
+                <p>Dagdusheth</p>
+            </a>
+        </div>
+
+        <div class="place">
+            <a href="lalmahal.html" style="color: black; text-decoration: none;">
+                <img src="lalmahal.jpg" alt="Lalmahal" title="Lalmahal Palace">
+                <p>Lalmahal</p>
+            </a>
+        </div>
+
+    </div>
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="agakhan.html">1</a></li>
+        <li><a href="shaniwar.html">2</a></li>
+        <li><a href="dagdusheth.html">3</a></li>
+        <li><a href="lalmahal.html">4</a></li>
+        <li><a href="punefront.html">5</a></li>
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+
+    <div class="site-footer">
+
+        <div class="footer">
+            <p><i class="fa-regular fa-copyright"></i> Copyright © 2025 Pune</p>
+            <p>Designed by Pune</p>
+            <p>Terms of Use</p>
+            <p>Cookie Policy</p>
+            <p><i class="fa-solid fa-phone"></i> +91 92718278292</p>
+            <p><i class="fa-solid fa-envelope"></i> pune@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Pune</p>
+        </div>
+
+        <div class="footer-social">
+            <div class="social-item">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-twitter"></i> Twitter
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

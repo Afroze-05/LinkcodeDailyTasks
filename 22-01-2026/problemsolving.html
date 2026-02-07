@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Problem Solving in JavaScript</title>
+</head>
+<body>
+
+    <h2>Problem Solving</h2>
+
+    <label>Enter a number:</label>
+    <input type="number" id="num">
+    <br><br>
+
+    <button onclick="reverseNumber()">Reverse Number</button>
+    <button onclick="checkPrime()">Check Prime</button>
+    <button onclick="checkPalindrome()">Check Palindrome</button>
+
+    <h3 id="result"></h3>
+
+    <script>
+        function reverseNumber() {
+            let num = document.getElementById("num").value;
+            let rev = 0, rem;
+
+            let temp = num;
+            while (temp > 0) {
+                rem = temp % 10;
+                rev = rev * 10 + rem;
+                temp = Math.floor(temp / 10);
+            }
+
+            document.getElementById("result").innerHTML =
+                "Reverse Number: " + rev;
+        }
+
+        function checkPrime() {
+            let num = document.getElementById("num").value;
+            let flag = true;
+
+            if (num <= 1) {
+                flag = false;
+            }
+
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) {
+                    flag = false;
+                    break;
+                }
+            }
+
+            document.getElementById("result").innerHTML =
+                flag ? "Prime Number" : "Not a Prime Number";
+        }
+
+        function checkPalindrome() {
+            let num = document.getElementById("num").value;
+            let temp = num;
+            let rev = 0, rem;
+
+            while (temp > 0) {
+                rem = temp % 10;
+                rev = rev * 10 + rem;
+                temp = Math.floor(temp / 10);
+            }
+
+            document.getElementById("result").innerHTML =
+                (num == rev) ? "Palindrome Number" : "Not a Palindrome";
+        }
+    </script>
+
+</body>
+</html>
