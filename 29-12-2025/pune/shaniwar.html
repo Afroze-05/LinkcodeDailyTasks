@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            background-color: beige;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Header */
+        .header {
+            background-color: rgb(119, 73, 21);
+            padding: 10px 0;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            justify-content: center;
+            /* center buttons */
+            gap: 4px;
+            background-color: rgb(229, 179, 137);
+            padding: 8px 0;
+        }
+
+        .nav button {
+            padding: 6px 14px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        /* Pune section */
+        .puneheader {
+            text-align: center;
+            margin-top: 30px;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* Image */
+        .puneheader img {
+            width: 360px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 5px;
+            display: block;
+            margin: 0 auto;
+            /* center image */
+        }
+
+        /* Title */
+        .puneheader p {
+            margin: 12px 0;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* Paragraph */
+        .puneheader h4 {
+            max-width: 900px;
+            margin: 0 auto;
+            font-size: 16px;
+            font-weight: normal;
+            line-height: 1.6;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+
+        .site-footer {
+            background-color: rgb(172, 93, 41);
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 40px 20px;
+            /* 👈 increases height */
+            gap: 25px;
+        }
+
+        /* Text links */
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+        /* Social section */
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+            flex-wrap: wrap;
+        }
+
+        /* Social item */
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .social-item i {
+            font-size: 22px;
+            color: white;
+        }
+
+        /* Hover effect */
+        .social-item:hover,
+        .social-item:hover i {
+            color: #ff9800;
+        }
+    </style>
+</head>
+
+<body>
+    <br>
+    <div class="header">
+        <div class="nav">
+            <button><a href="index.html">HOME</a></button>
+            <button>ABOUT</button>
+            <button>CONTACT</button>
+            <button>LOGIN</button>
+            <button>REGISTER</button>
+        </div>
+    </div>
+    <br>
+    <h1 style="text-align: center;" , color="black">Shaniwar Wada</h1>
+    <div class="puneheader">
+        <img src="shaniwar.jpg" alt="Shaniwar">
+        <img src="shaniwar1.jpg" alt="shaniwar1">
+        <img src="shaniwar2.jpg" alt="shaniwar2">
+        <br>
+        <h4>Pune is a major city in the western Indian state of Maharashtra, known for its rich history, cultural
+            heritage, and
+            modern lifestyle. Once the center of the Maratha Empire, the city is home to many historic landmarks
+            such as
+            Shaniwar
+            Wada**Shaniwar Wada** is a historic fortification located in the heart of Pune, Maharashtra. Built in 1732
+            by **Peshwa Baji Rao I**, it served as the seat of power of the Maratha Empire for many years. The fort is
+            known for its impressive architecture, massive gates, and rich historical significance. Although a major
+            fire in 1828 destroyed much of the original structure, the remains still reflect the grandeur of Maratha
+            craftsmanship. Shaniwar Wada is also associated with many legends and stories from the Maratha period,
+            making it one of Pune’s most famous and visited historical monuments.
+        </h4>
+    </div>
+    <div>
+        <iframe src="https://www.google.com/maps?q=Shaniwar%20Wada%20Pune&output=embed" width="100%" height="400"
+            style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
+    </div>
+    <div class="site-footer">
+
+        <div class="footer">
+            <p><i class="fa-regular fa-copyright"></i> Copyright © 2025 Pune</p>
+            <p>Designed by Pune</p>
+            <p>Terms of Use</p>
+            <p>Cookie Policy</p>
+            <p><i class="fa-solid fa-phone"></i> +91 92718278292</p>
+            <p><i class="fa-solid fa-envelope"></i> pune@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Pune</p>
+        </div>
+
+        <div class="footer-social">
+            <div class="social-item">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-twitter"></i> Twitter
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

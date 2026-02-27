@@ -1,0 +1,128 @@
+#text {
+    /*TEXT PROPERTIES */
+    text-align: center;
+    font-style: italic;
+    font-size: 25px;
+    color: rgb(49, 119, 180);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 2px 4px #49a8a8;
+    /*(RIGHT,DOWN, BLUR, COLOR) */
+    text-transform: uppercase;
+    /* text-decoration-line: underline;  /*IMPORTANT*/
+    /* text-decoration-color: rgb(221, 48, 48);
+    text-decoration-style: wavy;
+    text-decoration-thickness: 2px; */
+    text-decoration: underline line-through overline wavy 2px red;
+    /*shorthand, 1. define line 2. define style  3. define color 4. define thickness */
+    word-spacing: 40px;
+    /*(between 2 words) */
+    letter-spacing: 15px;
+    /*between each letter*/
+    line-height: 15px;
+    /*space between lines(can do vertically middle)*/
+    text-indent: 15px;
+    /*space between first line and rest of the lines*/
+}
+
+body {
+    /* background-color: beige;
+    background-image: url(bgimg.avif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    opacity: 0.3;*/
+    background: beige no-repeat center fixed;
+}
+
+#border {
+    /*
+    border-style: dashed;
+    border-color: red;
+    border-width: 5px;
+    border-top-style: dotted;
+    border-bottom-style: groove;
+    border-left-style: solid;
+    border-right-style: double;
+    border-radius: 100px;
+    border-collapse: collapse;
+/*for tables*/
+    border: 5px dashed blue;
+    border-style: dotted dashed groove double;
+}
+
+#margin {
+    /*margin-left: 200px;
+    margin-right: 200px;
+    margin-top: 20px;
+    margin-bottom: 20px;*/
+    margin: 70px 15px 20px 23px;
+}
+
+#padding {
+    padding: 50px;
+    padding-left: 240px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 5px solid rgb(3, 63, 33);
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 5px solid red;
+    margin: 20px 20px 24px 240px;
+    padding: 26px 25px 24px 30px;
+    background-color: aquamarine;
+    outline: 5px dashed blue;
+    outline-offset: 15px;
+}
+
+a {
+    background-color: rgb(180, 231, 255);
+    font-size: bold;
+    font-style: italic;
+
+}
+
+a.link {
+    color: rgb(104, 0, 104);
+}
+
+a:hover {
+    color: rgb(235, 0, 39);
+}
+
+a.active {
+    color: rgb(202, 255, 57);
+}
+
+a:visited {
+    color: rgb(163, 255, 140);
+}
+
+ul {
+
+    list-style-type: square;
+}
+
+ol {
+    background: salmon;
+    padding: 20px;
+}
+
+ol li {
+    list-style-type: decimal;
+    border: 5px solid rgb(255, 175, 175);
+    list-style-position: inside;
+    /*outside*/
+
+}
+
+img {
+    z-index: -1;
+    position: relative;
+    left: 0;
+    top: 0;
+}

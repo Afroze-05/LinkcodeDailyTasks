@@ -1,0 +1,183 @@
+ Which keyword is used to declare a variable in JavaScript?
+Ans: B. var
+
+2️⃣ What is the output of typeof null?
+Ans: C. object
+
+3️⃣ Which function is used to print output in the browser console?
+Ans: B. console.log()
+
+4️⃣ Which symbol is used for single-line comments?
+Ans: C. //
+
+5️⃣ What is JavaScript mainly used for?
+Ans: C. Adding interactivity to web pages
+
+6️⃣ Which method converts a string into a number?
+Ans: D. Both Number() and parseInt()
+
+7️⃣ Which loop executes at least once?
+Ans: C. do...while
+
+8️⃣ Which operator compares value and type?
+Ans: C. ===
+
+9️⃣ What does isNaN() check?
+Ans: C. Is value not a number
+
+🔟 Which array method adds an element at the end?
+Ans: C. push()
+
+1️⃣1️⃣ What is a closure?
+Ans: B. Function inside another function with access to parent scope
+
+1️⃣2️⃣ Which keyword is used to create a constant?
+Ans: C. const
+
+1️⃣3️⃣ Which method converts object to JSON string?
+Ans: B. JSON.stringify()
+
+1️⃣4️⃣ What is event bubbling?
+Ans: B. Event flows from child to parent
+
+1️⃣5️⃣ Which feature handles asynchronous code?
+Ans: D. All of the above
+
+1️⃣6️⃣ Which method prevents default browser behavior?
+Ans: B. preventDefault()
+
+1️⃣7️⃣ Which storage keeps data after browser closes?
+Ans: C. LocalStorage
+
+1️⃣8️⃣ What will Boolean(0) return?
+Ans: B. false
+
+1️⃣9️⃣ Which keyword refers to current object?
+Ans: A. this
+
+2️⃣0️⃣ Which function runs after a delay?
+Ans: B. setTimeout()
+
+🎨 CSS MCQs (With Answers)
+
+1️⃣ Which property changes text color?
+Ans: C. color
+
+2️⃣ Which symbol is used for class selector?
+Ans: B. .
+
+3️⃣ How do you apply CSS to HTML?
+Ans: D. All of the above
+
+4️⃣ Which property controls text size?
+Ans: B. font-size
+
+5️⃣ Which property removes underline from links?
+Ans: C. text-decoration
+
+6️⃣ Which property creates space inside an element?
+Ans: C. padding
+
+7️⃣ Which property hides element but keeps space?
+Ans: C. visibility: hidden
+
+8️⃣ Which position is relative to browser window?
+Ans: C. fixed
+
+9️⃣ Which unit is relative to parent?
+Ans: B. em
+
+🔟 Which property adds shadow to text?
+Ans: B. text-shadow
+
+1️⃣1️⃣ Which property creates flex container?
+Ans: B. display: flex
+
+1️⃣2️⃣ Main-axis alignment in flexbox?
+Ans: B. justify-content
+
+1️⃣3️⃣ Highest specificity selector?
+Ans: C. ID selector
+
+1️⃣4️⃣ Feature for responsive design?
+Ans: A. Media Queries
+
+1️⃣5️⃣ Best property for smooth animations?
+Ans: D. transform
+
+1️⃣6️⃣ Which creates stacking context?
+Ans: B. opacity
+
+1️⃣7️⃣ Pseudo-class on hover?
+Ans: D. :hover
+
+1️⃣8️⃣ Two-dimensional layout system?
+Ans: C. Grid
+
+1️⃣9️⃣ Property to control overflow?
+Ans: C. overflow
+
+2️⃣0️⃣ Rule for reusable values?
+Ans: A. Variables
+
+🌐 HTML MCQs (With Answers)
+
+1️⃣ What does HTML stand for?
+Ans: A. Hyper Text Markup Language
+
+2️⃣ Which tag creates a paragraph?
+Ans: A. <p>
+
+3️⃣ Largest heading tag?
+Ans: C. <h1>
+
+4️⃣ Which tag inserts image?
+Ans: B. <img>
+
+5️⃣ Attribute for image path?
+Ans: C. src
+
+6️⃣ Tag to create hyperlink?
+Ans: B. <a>
+
+7️⃣ Open link in new tab?
+Ans: B. target="_blank"
+
+8️⃣ Ordered list tag?
+Ans: B. <ol>
+
+9️⃣ Table row tag?
+Ans: B. <tr>
+
+🔟 Tag to collect user input?
+Ans: A. <input>
+
+1️⃣1️⃣ Semantic HTML5 tag?
+Ans: C. <section>
+
+1️⃣2️⃣ Accessibility attribute?
+Ans: B. alt
+
+1️⃣3️⃣ Embed webpage tag?
+Ans: C. <iframe>
+
+1️⃣4️⃣ Required form attribute for sending data?
+Ans: C. action
+
+1️⃣5️⃣ Metadata tag?
+Ans: A. <meta>
+
+1️⃣6️⃣ Self-contained content tag?
+Ans: A. <article>
+
+1️⃣7️⃣ Disable input field?
+Ans: C. disabled
+
+1️⃣8️⃣ Group options in dropdown?
+Ans: D. <optgroup>
+
+1️⃣9️⃣ Navigation links tag?
+Ans: B. <nav>
+
+2️⃣0️⃣ Tag without closing tag?
+Ans: C. <br>

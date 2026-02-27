@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 100px;
+            text-align: center;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: 0.5fr 0.5fr 0.5fr;
+            gap: 10px;
+            background-color: rgb(6, 15, 99);
+            height: 400px;
+            width: 900px;
+            padding: 10px;
+        }
+
+
+        .container div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+
+        }
+
+        .item1,
+        .item7 {
+            grid-column-end: span 1;
+            background-color: rgb(236, 23, 23);
+        }
+
+        .item2,
+        .item6 {
+            grid-column-end: span 1;
+            background-color: rgb(255, 163, 57);
+        }
+
+        .item3 {
+            grid-column-end: span 1;
+            background-color: rgb(41, 216, 172);
+        }
+
+        .item4 {
+            grid-column-end: span 1;
+            background-color: rgb(51, 180, 148);
+        }
+
+        .item5 {
+            grid-column-end: span 1;
+            background-color: rgb(3, 119, 84);
+        }
+
+
+        .item8 {
+            grid-column-end: span 3;
+            background-color: rgb(255, 192, 120);
+        }
+
+        .item9 {
+            grid-column-end: span 5;
+            background-color: rgb(58, 228, 177);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item1">1</div>
+        <div class="item2">2</div>
+        <div class="item3">3</div>
+        <div class="item4">4</div>
+        <div class="item5">5</div>
+        <div class="item6">6</div>
+        <div class="item7">7</div>
+        <div class="item8">8</div>
+        <div class="item9">9</div>
+
+
+
+    </div>
+</body>
+
+</html>

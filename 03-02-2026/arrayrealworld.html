@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>array form sample</title>
+</head>
+<body>
+
+<form onsubmit="return false;">
+    <h1>student details form</h1>
+
+    <label>serial no.</label>
+    <input type="number" id="serial"><br><br>
+
+    <label>name</label>
+    <input type="text" id="name"><br><br>
+
+    <label>marks</label>
+    <input type="number" id="marks"><br><br>
+
+    <label>subjects</label>
+    <input type="text" id="subject"><br><br>
+
+    <button onclick="addStudent()">Submit</button>
+    <button onclick="clearForm()">Clear</button>
+    <button onclick="showDetails()">All Student Details</button>
+</form>
+
+<br>
+
+<table border="1" id="table">
+    <tr>
+        <th>Serial</th>
+        <th>Name</th>
+        <th>Marks</th>
+        <th>Subject</th>
+    </tr>
+</table>
+
+<script>
+
+let students = [];
+
+function addStudent() {
+    let s = document.getElementById("serial").value;
+    let n = document.getElementById("name").value;
+    let m = document.getElementById("marks").value;
+    let sub = document.getElementById("subject").value;
+
+    students.push({ serial: s, name: n, marks: m, subject: sub });
+
+    alert("Student added!");
+}
+
+function showDetails() {
+    let table = document.getElementById("table");
+
+    
+    table.innerHTML = `
+        <tr>
+            <th>Serial</th>
+            <th>Name</th>
+            <th>Marks</th>
+            <th>Subject</th>
+        </tr>`;
+
+    for (let i = 0; i < students.length; i++) {
+        table.innerHTML += `
+            <tr>
+                <td>${students[i].serial}</td>
+                <td>${students[i].name}</td>
+                <td>${students[i].marks}</td>
+                <td>${students[i].subject}</td>
+            </tr>`;
+    }
+}
+
+function clearForm() {
+    document.getElementById("serial").value = "";
+    document.getElementById("name").value = "";
+    document.getElementById("marks").value = "";
+    document.getElementById("subject").value = "";
+}
+
+</script>
+
+</body>
+</html>

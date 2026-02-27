@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .origanal {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(255, 134, 229);
+            transform: translate(10px, 30px);
+
+
+        }
+
+        .rotate {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(248, 123, 139);
+            transform: rotate(60deg);
+        }
+
+        .scale {
+            height: 100px;
+            width: 100px;
+            background-color: #7bf881;
+            transform: scale(1, 1);
+        }
+
+        .copy {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(16, 241, 211);
+            /* transform: translate(100px, 100px);*/
+            /* transform: rotate(-60deg);*/
+            /* transform: scale(1,2);*/
+            /*  transform: scaleX(2);   increase width*/
+            /*  transform: scaleY(2);   increase height*/
+            /* transform: skew(20deg,50deg);*/
+            /* transform: skewY(20deg);*/
+            transform: skewX(-20deg);
+        }
+
+        .copy1 {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(255, 252, 99);
+            transition: 2s;
+
+        }
+
+        .copy1:hover {
+            background-color: rgb(255, 92, 63);
+            /* width: 500px;*/
+            transform: rotate(360deg);
+
+        }
+
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(255, 195, 195);
+            margin: 10px;
+            transition-duration: 5s;
+
+        }
+
+        .ease:hover {
+            background-color: rgb(255, 0, 98);
+            transition-timing-function: ease;
+            /* slow start and end*/
+            width: 400px;
+            transition-delay: 2s;
+        }
+
+        .linear:hover {
+            background-color: rgb(173, 111, 255);
+            transition-timing-function: linear;
+            /* fast start and end*/
+            width: 400px;
+        }
+
+        .ease-in:hover {
+            background-color: rgb(124, 251, 255);
+            transition-timing-function: ease-in;
+            /* slow start*/
+            width: 400px;
+        }
+
+        .ease-out:hover {
+            background-color: rgb(171, 255, 146);
+            transition-timing-function: ease-out;
+            /* slow end*/
+            width: 400px;
+        }
+
+        .ease-in-out:hover {
+            background-color: rgb(251, 255, 27);
+            transition-timing-function: ease-in-out;
+            /* slow start and end*/
+            width: 400px;
+        }
+
+        .abc {
+            height: 100px;
+            width: 100px;
+            background-color: rgb(170, 186, 255);
+            margin: 10px;
+            transition: 2s;
+        }
+
+        .abc:hover {
+            height: 500px;
+            width: 500px;
+            background-color: rgb(8, 255, 243);
+            transform: rotate(360deg);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- transform ,translate -->
+    <h1>transform property </h1>
+    <div class="origanal"> original</div>
+    <div class="copy"> copied</div>
+    <div class="rotate"> rotate</div>
+    <div class="scale"> scale</div>
+    <div class="copy1"> copy1</div>
+    <div class="ease"> ease</div>
+    <div class="linear"> linear</div>
+    <div class="ease-in"> ease-in</div>
+    <div class="ease-out"> ease-out</div>
+    <div class="ease-in-out"> ease-in-out</div>
+    <div class="abc"> abc</div>
+
+</body>
+
+</html>

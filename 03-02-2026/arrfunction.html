@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    //map
+        let nums=[1,2,3,4,5];
+        let sq=nums.map(n=>n*n);
+        document.write(sq);
+           document.write("<br>");
+
+
+           //for each
+          document.write("<br>");
+        for(let i=0;i<sq.length;i++){
+            document.write(i+" : "+sq[i]);
+            document.write("<br>");
+        }
+
+       document.write("<br>");
+        let marks=[23,67,78,90,89];
+       marks.forEach(m=>document.write(m+"<br>"));
+
+        let fmarks1=marks.map((ans)=>ans+10);
+       document.write("<br>");
+       document.write(fmarks1);
+
+       //filter
+       document.write("<br>");
+       let ans=marks.filter(op=>op>=50);
+       document.write("<br>");
+       document.write(ans);
+
+       //reduce
+       let a=[10,20,30,40];
+       document.write("<br>");
+       let total=a.reduce((sum,op)=>{
+        return sum+op;
+       });
+       document.write("<br>");
+       document.write("total : "+total);
+
+      let b=[21,34,56,78,87,56];
+      let ans1=b.reduce((count,n)=>{
+        if (n%2==0){
+            count++;
+        }
+        return count;
+      },0);
+      document.write("<br>");
+      document.write("ans1 : "+ans1);
+
+      let c=[21,34,55,78,87,56];
+       let ans2=c.findIndex(op=>op>=35);
+       document.write("<br>");
+       document.write(ans2);
+
+       let d=[21,34,55,78,87,56];
+       let ans3=d.find(op=>op>=35);
+       document.write("<br>");
+       document.write(ans3);  //first occurance 
+
+//reverse, slice, sort, keys
+ document.write("<br>");
+ //joining
+let ab=[56,57];
+let bc=[58,59];
+let abc=ab.concat(bc);
+document.write("<br>");
+document.write(abc);
+ document.write("<br>");
+
+ //index of
+ let op1=ab.indexOf(56);
+document.write("<br>");
+document.write(op1);
+
+//find index
+let op2=ab.findIndex(n=>n>56);
+document.write("<br>");
+document.write(op2);
+
+//includes
+let op3=bc.includes(51);
+document.write("<br>");
+document.write(op3);
+
+//reverse
+let op4=bc.reverse();
+document.write("<br>");
+document.write(op4);
+
+//slice
+let op5=bc.slice(1);
+document.write("<br>");
+document.write(op5);
+
+//sort
+let op6=bc.sort();
+document.write("<br>");
+document.write(op6);
+
+//keys
+let op7=bc.keys();
+document.write("<br>");
+document.write(op7);
+
+//entries
+let op8=bc.entries();
+document.write("<br>");
+document.write(op8);
+
+//copywithin
+let op9=bc.copyWithin(1,2);
+document.write("<br>");
+document.write(op9);
+
+//splice
+let op10=bc.splice(1,2);
+document.write("<br>");
+document.write(op10);
+
+let x=[12,13,14,15];
+document.write("<br>");
+document.write(x.slice(0,2));
+document.write("<br>");
+let xans=x.splice(1,1,23);
+document.write(xans);
+
+
+document.write("<br>");
+let x1=[12,13,14,15,19,70];
+document.write(x1.slice(0,3));
+document.write("<br>");
+let xans1=x1.splice(3,2,24);
+document.write(x1);
+
+document.write("<br>");
+//add ,update,delete, readable,
+//read -filters, dropdown, excel sheet- sort a to z , 
+// hightest to low, low to highest, 
+// grp views pass student ratios, 
+//grp views pass student ratios
+
+let z=[1,2,3,4,5];
+z.splice(2,3,6);
+document.write(z);
+
+document.write("<br>");
+let z1=[18,65,34,23];
+z1.sort();
+document.write(z1);
+document.write("<br>");
+
+let z2=[78,65,34,23];
+z2.sort((a,b)=>a-b);
+document.write(z2);
+document.write("<br>");
+let z3=[78,65,34,23];
+document.write(z3.join("*"));
+document.write("<br>");
+document.write(z3.every(n=>n%2==0));
+document.write("<br>");
+document.write(z3.some(n=>n%2==0));
+document.write("<br>");
+document.write(z3.keys());
+document.write("<br>");
+for(let k of z3.keys()){
+    document.write(k);
+    document.write("<br>");
+}
+
+
+document.write("<br>");
+for(let [i,v] of z3.entries()){
+    document.write(i+" : "+v);
+    document.write("<br>");
+}
+
+//copywithin
+let z4=[1,2,3,4];
+document.write("<br>");
+document.write(z4.copyWithin(0,1));
+document.write("<br>");
+document.write(z4.copyWithin(0,1,2));
+
+//flat
+let z5=[1,2,3,4,5,6,7,8,9,10];
+document.write("<br>");
+document.write(z5.flat(4));
+</script>
+</body>
+</html>

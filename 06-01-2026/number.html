@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>All Number Programs</title>
+</head>
+<body>
+
+<h2>All Number Programs Output</h2>
+<p id="demo"></p>
+
+<script>
+    let output = "";
+
+    /* ============================= */
+    /* 1. Sum of Digits */
+    /* ============================= */
+    let num = 1234;
+    let sum = 0;
+    let temp = num;
+
+    while (temp > 0) {
+        sum += temp % 10;
+        temp = Math.floor(temp / 10);
+    }
+    output += "Sum of digits of " + num + " = " + sum + "<br>";
+
+    /* ============================= */
+    /* 2. Reverse Number */
+    /* ============================= */
+    let reverse = 0;
+    temp = num;
+
+    while (temp > 0) {
+        reverse = reverse * 10 + (temp % 10);
+        temp = Math.floor(temp / 10);
+    }
+    output += "Reverse of " + num + " = " + reverse + "<br>";
+
+    /* ============================= */
+    /* 3. Palindrome Check */
+    /* ============================= */
+    if (num === reverse) {
+        output += num + " is Palindrome<br>";
+    } else {
+        output += num + " is Not Palindrome<br>";
+    }
+
+    /* ============================= */
+    /* 4. Armstrong Number */
+    /* ============================= */
+    let armSum = 0;
+    let digits = num.toString().length;
+    temp = num;
+
+    while (temp > 0) {
+        let d = temp % 10;
+        armSum += d ** digits;
+        temp = Math.floor(temp / 10);
+    }
+
+    if (armSum === num) {
+        output += num + " is Armstrong Number<br>";
+    } else {
+        output += num + " is Not Armstrong Number<br>";
+    }
+
+    /* ============================= */
+    /* 5. Factorial */
+    /* ============================= */
+    let num1 = 5;
+    let fact = 1;
+
+    for (let i = 1; i <= num1; i++) {
+        fact *= i;
+    }
+    output += "Factorial of " + num1 + " = " + fact + "<br>";
+
+    /* ============================= */
+    /* 6. Prime Number */
+    /* ============================= */
+    let number = 20;
+    let prime = true;
+
+    if (number <= 1) {
+        prime = false;
+    }
+
+    for (let i = 2; i < number; i++) {
+        if (number % i === 0) {
+            prime = false;
+            break;
+        }
+    }
+
+    if (prime) {
+        output += number + " is Prime Number<br>";
+    } else {
+        output += number + " is Not Prime Number<br>";
+    }
+
+    /* ============================= */
+    /* 7. Happy Number */
+    /* ============================= */
+    let happyNum = 19;
+    temp = happyNum;
+
+    while (temp !== 1 && temp !== 4) {
+        let s = 0;
+        while (temp > 0) {
+            let d = temp % 10;
+            s += d * d;
+            temp = Math.floor(temp / 10);
+        }
+        temp = s;
+    }
+
+    if (temp === 1) {
+        output += happyNum + " is Happy Number<br>";
+    } else {
+        output += happyNum + " is Not Happy Number<br>";
+    }
+
+    /* ============================= */
+    /* 8. Sad Number */
+    /* ============================= */
+    let sadNum = 20;
+    temp = sadNum;
+
+    while (temp !== 1 && temp !== 4) {
+        let s = 0;
+        while (temp > 0) {
+            let d = temp % 10;
+            s += d * d;
+            temp = Math.floor(temp / 10);
+        }
+        temp = s;
+    }
+
+    if (temp === 4) {
+        output += sadNum + " is Sad Number<br>";
+    } else {
+        output += sadNum + " is Not Sad Number<br>";
+    }
+
+    document.getElementById("demo").innerHTML = output;
+</script>
+
+</body>
+</html>

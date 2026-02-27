@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav {
+            background-color: #000000;
+            overflow: hidden;
+            padding: 10px 15px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav ul li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            background-color: #111;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .site-footer {
+            background-color: rgb(0, 36, 65);
+            color: white;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            padding: 40px 20px;
+            gap: 25px;
+        }
+
+
+        .footer {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            text-align: center;
+        }
+
+
+        .footer-social {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            font-size: 18px;
+            flex-wrap: wrap;
+        }
+
+
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+        }
+
+        .social-item i {
+            font-size: 22px;
+            color: white;
+        }
+
+
+        .social-item:hover,
+        .social-item:hover i {
+            color: #ff9800;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            /* remove list bullets */
+            padding: 0px;
+        }
+
+        .pagination li a {
+            display: block;
+            /* let links fill the list item */
+            padding: 8px 12px;
+            text-decoration: none;
+            border: 1px solid gray;
+            color: black;
+            margin: 0 4px;
+            border-radius: 5px;
+            /* add rounded borders */
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .place {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            font-size: 18px;
+            background-color: rgb(243, 243, 243);
+            width: 250px;
+
+            border-radius: 15px;
+            box-shadow: 2px 2px 5px black;
+            padding: 10px;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .place:hover {
+            transform: scale(1.1);
+        }
+
+        .place img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid black;
+            box-shadow: 2px 2px 5px black;
+            border-radius: 15px;
+        }
+
+        .place p {
+            margin-top: 8px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="clothes.html">Home</a>>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h1> SHOPEASE</h1>
+    </div>
+    <div class="gallery">
+
+        <div class="place">
+            <img src="cloth1.jpg" alt="Cloth1" title="Cloth1">
+            <p>Cloth1</p>
+        </div>
+
+        <div class="place">
+            <a href="agakhan.html" style="color: black; text-decoration: none;">
+                <img src="cloth2.jpg" alt="Cloth2" title="Cloth2"></a>
+            <p>Cloth2</p>
+        </div>
+
+        <div class="place">
+            <a href="shaniwar.html" style="color: black; text-decoration: none;">
+                <img src="cloth3.jpg" alt="Cloth3" title="Cloth3">
+            </a>
+            <p>Cloth3</p>
+        </div>
+
+        <div class="place">
+            <a href="dagdusheth.html" style="color: black; text-decoration: none;">
+                <img src="cloth4.jpg" alt="Cloth4" title="Cloth4">
+                <p>Cloth4</p>
+            </a>
+        </div>
+
+
+
+    </div>
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="cloth5.html">1</a></li>
+        <li><a href="cloth6.html">2</a></li>
+        <li><a href="cloth7.html">3</a></li>
+        <li><a href="cloth8.html">4</a></li>
+
+        <li><a href="#">&raquo;</a></li>
+    </ul>
+
+    <div class="site-footer">
+
+        <div class="footer">
+            <p><i class="fa-regular fa-copyright"></i> Copyright © 2025 Pune</p>
+            <p>Designed by Pune</p>
+            <p>Terms of Use</p>
+            <p>Cookie Policy</p>
+            <p><i class="fa-solid fa-phone"></i> +91 92718278292</p>
+            <p><i class="fa-solid fa-envelope"></i> pune@gmail.com</p>
+            <p><i class="fa-solid fa-location-dot"></i> Pune</p>
+        </div>
+
+        <div class="footer-social">
+            <div class="social-item">
+                <i class="fa-brands fa-facebook"></i> Facebook
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-twitter"></i> Twitter
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-instagram"></i> Instagram
+            </div>
+            <div class="social-item">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

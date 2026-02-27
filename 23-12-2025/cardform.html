@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(gifmulticolor.gif);
+            background-repeat: repeat;
+            background-size: auto;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #form {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        #fieldset {
+            position: relative;
+            background-color: white;
+            width: 35%;
+            min-width: 350px;
+            height: 700px;
+            padding: 60px;
+            border: none;
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+
+        #header img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        #girl img {
+            position: absolute;
+            top: 140px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+
+        #name {
+            margin-top: 90px;
+            text-align: center;
+        }
+
+        #name h1 {
+            margin: 10px 0 5px;
+        }
+
+        #name p {
+            color: #555;
+        }
+
+        .text {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 15px 0;
+        }
+
+        .text a {
+            color: red;
+            font-size: 19px;
+            text-decoration: none;
+        }
+
+        .btn-box {
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 20px;
+            border-top: 1px solid #000;
+        }
+
+        .btn-box span {
+            display: block;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .follow {
+            margin: 20px;
+            height: 45px;
+            background-color: #45ff16;
+            color: white;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .following {
+            background-color: #e60101;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="form">
+        <fieldset id="fieldset">
+
+            <div id="header">
+                <img src="header.jpg">
+            </div>
+
+            <div id="girl">
+                <img src="girl.avif">
+            </div>
+
+            <div id="name">
+                <h1>Afroze !!</h1>
+                <p>Web Developer · Designer · Mobile App & IoT Developer</p>
+            </div>
+
+            <div class="text">
+                <a href="https://www.google.com/maps?q=pune" target="_blank">Pune</a>
+                <a href="mailto:afrozeshaikh7860@gmail.com" target="_blank">Email</a>
+            </div>
+
+            <div class="btn-box">
+                <div>
+                    <span>800</span> Followers
+                </div>
+                <div>
+                    <span>800</span> Following
+                </div>
+            </div>
+
+            <!-- FOLLOW BUTTON -->
+            <div class="follow" id="follow" onclick="follow()">
+                Follow
+            </div>
+
+            <!-- AUDIO -->
+            <audio id="audio" src="audioo.mp3"></audio>
+
+        </fieldset>
+    </form>
+
+    <script>
+        function follow() {
+            let btn = document.getElementById("follow");
+            let audio = document.getElementById("audio");
+
+            if (btn.innerText === "Follow") {
+                btn.innerText = "Following";
+                btn.classList.add("following");
+                audio.play();
+            } else {
+                btn.innerText = "Follow";
+                btn.classList.remove("following");
+                audio.pause();
+                audio.currentTime = 0;
+            }
+        }
+    </script>
+
+</body>
+
+</html>

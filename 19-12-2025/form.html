@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Flex Form</title>
+    <style>
+        .form-box {
+            display: flex;
+            justify-content: center;
+        }
+
+        .form {
+            width: 600px;
+        }
+
+        .row {
+            display: flex;
+            margin-bottom: 12px;
+        }
+
+        .row label {
+            width: 200px;
+            font-weight: bold;
+        }
+
+        .row input,
+        .row select,
+        .row textarea {
+            flex: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-box">
+        <form class="form">
+
+            <div class="row">
+                <label>First Name *</label>
+                <input type="text">
+            </div>
+
+            <div class="row">
+                <label>Email *</label>
+                <input type="email">
+            </div>
+
+            <div class="row">
+                <label>Room Type</label>
+                <select>
+                    <option>1BHK</option>
+                    <option>2BHK</option>
+                    <option>3BHK</option>
+                </select>
+            </div>
+
+            <div class="row">
+                <label>Arrival Date *</label>
+                <input type="date">
+            </div>
+
+            <div class="row">
+                <label>Departure Date *</label>
+                <input type="date">
+            </div>
+
+            <div class="row">
+                <label>Guests *</label>
+                <input type="number">
+            </div>
+
+            <div class="row">
+                <label>Free Pickup</label>
+                <div>
+                    <input type="radio" name="p"> Yes
+                    <input type="radio" name="p"> No
+                </div>
+            </div>
+
+            <div class="row">
+                <label>Flight Number</label>
+                <input type="text">
+            </div>
+
+            <div class="row">
+                <label>Special Request</label>
+                <textarea rows="3"></textarea>
+            </div>
+
+            <div class="row">
+                <label></label>
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+
+    </div>
+    <button style:color:blue><a href="form1.html"> NEXT</a></button>
+</body>
+
+</html>

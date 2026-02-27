@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Slideshow</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: white;
+        }
+
+        img {
+            width: 300px;
+            height: 200px;
+            margin-top: 50px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Image Slideshow</h2>
+    <img id="slide" src="doc1.jpg" alt="Slideshow">
+
+    <script>
+        let images = ["doc1.jpg", "doc2.jpg", "doc3.jpg"];
+        let index = 0;
+
+        setInterval(() => {
+            index++;
+            if (index >= images.length) {
+                index = 0;
+            }
+            document.getElementById("slide").src = images[index];
+        }, 3000); // 3 seconds
+    </script>
+
+</body>
+
+</html>

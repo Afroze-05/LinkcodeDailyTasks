@@ -1,0 +1,153 @@
+/* Global */
+body {
+    font-family: 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Table */
+table {
+    width: 100%;
+    height: 100vh;
+    border-collapse: collapse;
+}
+
+/* Common TD */
+td {
+    padding: 25px;
+    vertical-align: top;
+}
+
+/* LEFT SECTION */
+.left-section {
+    width: 35%;
+    color: white;
+    text-align: center;
+
+    background: linear-gradient(
+        to bottom,
+        #4da3ff 0%,
+        #4da3ff 20%,
+        #0B1C2D 45%,
+        #0B1C2D 100%
+    );
+}
+
+/* Profile Image */
+.left-section img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 4px solid white;
+    margin: 20px 0;
+    background-color: white;
+}
+
+/* Left Headings */
+.left-section h2 {
+    font-family: 'Arial Black', sans-serif;
+    text-decoration: underline;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+/* Left Lists */
+.left-section ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    text-align: left;
+    padding-left: 15px;
+    line-height: 1.9;
+    font-size: 17px;
+    color: white;
+}
+
+.left-section li i {
+    margin-right: 8px;
+    color: #dbe9ff;
+}
+
+/* RIGHT SECTION */
+.right-section {
+    width: 65%;
+    background-color: #E6E6FF;
+    color: #0B1C2D;
+    padding: 40px;
+}
+
+/* Name */
+.right-section h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin-bottom: 6px;
+    font-size: 42px;          /* bigger but clean */
+    letter-spacing: 3px;
+    color: #000047;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.15);
+}
+ .right-section h1::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    background-color: #000075;
+    margin: 8px auto 0;
+    border-radius: 10px;
+}
+
+
+
+/* Subtitle */
+.right-section h3 {
+    font-family: Verdana, sans-serif;
+    text-align: center;
+    margin-top: 0;
+    font-size: 20px;
+}
+
+/* Rounded Section Headings */
+.section-pill {
+    display: inline-block;
+    background-color: #000075;
+    color: white;
+    padding: 8px 22px;
+    border-radius: 25px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+/* Content */
+.right-section p,
+.right-section ul {
+    line-height: 1.75;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.right-section ul {
+    padding-left: 20px;
+}
+
+.right-section li i {
+    margin-right: 6px;
+}
+
+/* Links */
+a {
+    color: #000075;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Divider */
+hr {
+    border: 1px solid #0B1C2D;
+    margin: 15px 0;
+}

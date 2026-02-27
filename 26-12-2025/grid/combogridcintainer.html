@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>9 Grid Layouts in One Container</title>
+
+    <style>
+        /* ===== PAGE ===== */
+        body {
+            margin: 0;
+            background: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* ===== MAIN 3x3 GRID ===== */
+        .main-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            gap: 20px;
+            width: 95vw;
+            max-width: 1400px;
+        }
+
+        /* ===== COMMON CONTAINER STYLE ===== */
+        .container {
+            background: rgb(6, 15, 99);
+            padding: 10px;
+            display: grid;
+            gap: 10px;
+            height: 220px;
+        }
+
+        /* ===== COMMON ITEM STYLE ===== */
+        .container div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        /* ========================================================= */
+        /* =================== CONTAINER 1 ========================= */
+        .c1 {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .c1 .i1 {
+            background: red;
+        }
+
+        .c1 .i2 {
+            background: rgb(255, 154, 60);
+        }
+
+        .c1 .i3 {
+            background: #ffc31d;
+        }
+
+        .c1 .i4 {
+            background: rgb(10, 87, 64);
+        }
+
+        .c1 .i5 {
+            background: rgb(25, 165, 111);
+        }
+
+        .c1 .i6 {
+            background: rgb(25, 235, 147);
+        }
+
+        /* =================== CONTAINER 2 ========================= */
+        .c2 {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .c2 .i1 {
+            grid-column: span 2;
+            background: red;
+        }
+
+        .c2 .i2 {
+            grid-row: span 2;
+            background: rgb(255, 154, 60);
+        }
+
+        .c2 .i3 {
+            background: rgb(10, 87, 64);
+        }
+
+        .c2 .i4 {
+            background: rgb(25, 165, 111);
+        }
+
+        /* =================== CONTAINER 3 ========================= */
+        .c3 {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: .5fr 1fr .5fr;
+        }
+
+        .c3 .i1 {
+            grid-column: span 3;
+            background: rgb(255, 154, 60);
+        }
+
+        .c3 .i2 {
+            background: rgb(10, 87, 64);
+        }
+
+        .c3 .i3 {
+            grid-column: span 2;
+            background: rgb(255, 28, 28);
+        }
+
+        .c3 .i4 {
+            grid-column: span 3;
+            background: rgb(33, 146, 103);
+        }
+
+        /* =================== CONTAINER 4 ========================= */
+        .c4 {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: .5fr 1fr .2fr;
+        }
+
+        .c4 .i1 {
+            grid-column: span 2;
+            background: rgb(255, 154, 60);
+        }
+
+        .c4 .i2 {
+            grid-column: span 2;
+            background: rgb(236, 23, 23);
+        }
+
+        .c4 .i3 {
+            background: rgb(27, 133, 101);
+        }
+
+        .c4 .i4 {
+            grid-column: span 3;
+            background: rgb(71, 224, 165);
+        }
+
+        .c4 .i5 {
+            grid-column: span 4;
+            background: rgb(252, 143, 19);
+        }
+
+        /* =================== CONTAINER 5 ========================= */
+        .c5 {
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+
+        .c5 div:nth-child(odd) {
+            background: rgb(21, 116, 87);
+        }
+
+        .c5 div:nth-child(even) {
+            background: rgb(252, 143, 19);
+        }
+
+        /* =================== CONTAINER 6 ========================= */
+        .c6 {
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(5, 1fr);
+        }
+
+        .c6 .i1 {
+            grid-column: span 2;
+            background: rgb(236, 23, 23);
+        }
+
+        .c6 .i8 {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: rgb(255, 192, 120);
+        }
+
+        .c6 .i12 {
+            grid-column: span 3;
+            background: rgb(58, 228, 177);
+        }
+
+        .c6 div {
+            background: rgb(27, 133, 101);
+        }
+
+        /* =================== CONTAINER 7 ========================= */
+        .c7 {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: .5fr 1fr;
+        }
+
+        .c7 .i1 {
+            background: rgb(255, 163, 57);
+        }
+
+        .c7 .i2 {
+            background: rgb(27, 133, 101);
+        }
+
+        .c7 .i3 {
+            background: rgb(255, 98, 25);
+        }
+
+        .c7 .box {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            gap: 10px;
+        }
+
+        .c7 .box div:nth-child(1) {
+            grid-column: span 2;
+            background: rgb(11, 179, 165);
+        }
+
+        .c7 .box div:nth-child(2) {
+            background: rgb(65, 182, 147);
+        }
+
+        .c7 .box div:nth-child(3) {
+            background: rgb(255, 163, 57);
+        }
+
+        /* =================== CONTAINER 8 ========================= */
+        .c8 {
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(3, .5fr);
+        }
+
+        .c8 .i8 {
+            grid-column: span 3;
+            background: rgb(255, 192, 120);
+        }
+
+        .c8 .i9 {
+            grid-column: span 5;
+            background: rgb(58, 228, 177);
+        }
+
+        .c8 div {
+            background: rgb(236, 23, 23);
+        }
+
+        /* =================== CONTAINER 9 ========================= */
+        .c9 {
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, .5fr);
+        }
+
+        .c9 .i1 {
+            grid-column: span 3;
+            background: rgb(255, 163, 57);
+        }
+
+        .c9 .i2 {
+            grid-row: span 2;
+            background: rgb(27, 133, 101);
+        }
+
+        .c9 .i3 {
+            grid-column: span 2;
+            background: rgb(58, 228, 177);
+        }
+
+        .c9 .i4 {
+            background: rgb(255, 80, 57);
+        }
+
+        .c9 .i5 {
+            background: rgb(255, 163, 57);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main-grid">
+
+        <!-- ROW 1 -->
+        <div class="container c1">
+            <div class="i1">1</div>
+            <div class="i2">2</div>
+            <div class="i3">3</div>
+            <div class="i4">4</div>
+            <div class="i5">5</div>
+            <div class="i6">6</div>
+        </div>
+
+        <div class="container c2">
+            <div class="i1">1</div>
+            <div class="i2">2</div>
+            <div class="i3">3</div>
+            <div class="i4">4</div>
+        </div>
+
+        <div class="container c3">
+            <div class="i1">1</div>
+            <div class="i2">2</div>
+            <div class="i3">3</div>
+            <div class="i4">4</div>
+        </div>
+
+        <!-- ROW 2 -->
+        <div class="container c4">
+            <div class="i1">1</div>
+            <div class="i2">2</div>
+            <div class="i3">3</div>
+            <div class="i4">4</div>
+            <div class="i5">5</div>
+        </div>
+
+        <div class="container c5">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+            <div>18</div>
+        </div>
+
+        <div class="container c6">
+            <div class="i1">1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div class="i8">8</div>
+            <div>9</div>
+            <div>10</div>
+            <div>11</div>
+            <div class="i12">12</div>
+            <div>13</div>
+        </div>
+
+        <!-- ROW 3 -->
+        <div class="container c7">
+            <div class="i1">1</div>
+            <div class="i2">2</div>
+            <div class="i3">3</div>
+            <div class="box">
+                <div>4</div>
+                <div>5</div>
+                <div>6</div>
+            </div>
+        </div>
+
+        <div class="container c8">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+            <div>4</div>
+            <div>5</div>
+            <div>6</div>
+            <div>7</div>
+            <div class="i8">8</div>
+            <div class="i9">9</div>
+        </div>
+
+        <div class="container c9">
+            <div class="i1">1</div>
+            <div class="i2">2</div>
+            <div class="i3">3</div>
+            <div class="i4">4</div>
+            <div class="i5">5</div>
+        </div>
+
+    </div>
+</body>
+
+</html>

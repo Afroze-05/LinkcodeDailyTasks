@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+
+        <label for="name">NAME <sup>*</sup></label>
+        <input type="text" id="name" name="entered" placeholder="eg:john" required autocomplete="off">
+        <br>
+        <label for="email">EMAIL <sup>*</sup></label>
+        <input type="email" id="email" name="entered" placeholder="eg:john@gmail.com" required autocomplete="off">
+        <br>
+        <label for="password">PASSWORD <sup>*</sup></label>
+        <input type="password" id="password" name="entered" placeholder="eg:john123" required autocomplete="off"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{6,8}"
+            title="6-8 characters, including lowercase, uppercase, and number">
+        <br>
+
+        <label for="countryCode">Country Code:</label>
+        <select id="countryCode" name="countryCode">
+            <option value="+91" selected>India (+91)</option>
+            <option value="+1">USA (+1)</option>
+            <option value="+44">UK (+44)</option>
+            <option value="+61">Australia (+61)</option>
+            <option value="+81">Japan (+81)</option>
+            <option value="+49">Germany (+49)</option>
+            <option value="+86">China (+86)</option>
+
+        </select>
+        <label for="phone">PHONE <sup>*</sup></label>
+        <input type="tel" id="phone" name=" phone " placeholder="eg:1234567890" required autocomplete="off"
+            pattern="\+91[6-9]{1}[0-9]{9}" title="10 digits">
+        <br>
+
+        <label for="address">ADDRESS <sup>*</sup></label>
+        <textarea id="address" name="address" placeholder="eg:123 Main St" required autocomplete="off"></textarea>
+        <br>
+        <label for="gender">GENDER <sup>*</sup></label>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Female</label>
+        <br>
+        <label for="hobbies">HOBBIES <sup>*</sup></label>
+        <input type="checkbox" id="hobbies" name="hobbies" value="hobbies">
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" id="hobbies" name="hobbies" value="hobbies" checked>
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" id="hobbies" name="hobbies" value="hobbies">
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" id="hobbies" name="hobbies" value="hobbies">
+        <label for="hobbies">Hobbies</label>
+        <input type="checkbox" id="hobbies" name="hobbies" value="hobbies">
+        <label for="hobbies">Hobbies</label>
+        <br>
+        <label for="fileUpload">FILE UPLOAD <sup>*</sup></label>
+        <input type="file" id="fileUpload" name="fileUpload" accept=".jpg,.png,.pdf,.txt,.docx" multiple>
+        <br>
+        <input type="submit" value="Submit">
+        <button style:color:blue><a href="form.html"> NEXT return to form </a></button>
+    </form>
+</body>
+
+</html>

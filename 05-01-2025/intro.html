@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="txt.js">   </script>
+</head>
+
+<body>
+    <h1>Javascript H1</h1>
+    <p id="abc"></p>
+    <p id="xyz"></p>
+    <script>
+        //document comes on same line we neeed to give + "<br>"
+        document.write("hello using document.write with <br> tag" + "<br>");
+        document.write("hello i am js");
+        //console by default comes on new line
+        console.log("hello console log");
+        alert("heelo alert");
+        //we need to make id for p tag, and can give inner html tag and display msg
+        document.getElementById("abc").innerHTML = "<h2>hello js innerHtml </h2>";//in bold
+        document.getElementById("xyz").innerText = "Hello innertext";//not in bold
+    </script>
+</body>
+
+</html>
+<!--document.getElementById("id").innerHTML = "Hello World";
+ document.write("Hello World");
+ console.log();
+ alert();
+ -->
