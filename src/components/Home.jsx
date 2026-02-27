@@ -36,12 +36,12 @@ const Home = () => {
       <footer className="home-footer">
         <div className="footer-content">
           <h2>ShopEasy</h2>
-          <p>Making your shopping experience smooth and affordable.</p>
+          <p>Making your shopping experience smooth and affordable.!</p>
 
           <div className="footer-links">
             <a href="#">Home</a>
             <a href="#">About</a>
-            <a href="#">Categories</a>
+            <a href="#">Categories</a>cd my
             <a href="#">Contact</a>
           </div>
 
